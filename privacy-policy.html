@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Carey Web Services Ireland</title>
+
+  <meta name="description" content="Privacy Policy for Carey Web Services. Learn how Carey Web Services collects, uses and stores information when customers enquire about simple one-page websites for Irish service businesses." />
+
+  <meta name="keywords" content="Carey Web Services privacy policy, website privacy policy Ireland, GDPR website policy Ireland, service website privacy policy" />
+
+  <meta name="author" content="Carey Web Services" />
+
+  <style>
+    :root {
+      --navy: #071827;
+      --blue: #1e88e5;
+      --green: #22c55e;
+      --white: #ffffff;
+      --off-white: #f7fafc;
+      --text: #1f2937;
+      --muted: #64748b;
+      --border: #dbe3ea;
+      --shadow: 0 20px 50px rgba(7, 24, 39, 0.14);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-bar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand strong {
+      color: var(--navy);
+      font-size: 24px;
+      display: block;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .menu a:hover {
+      color: var(--blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--navy);
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.24), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(30, 136, 229, 0.22), transparent 36%),
+        linear-gradient(135deg, #071827 0%, #102a43 100%);
+      color: var(--white);
+      padding: 82px 20px 68px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+      max-width: 900px;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      font-size: 19px;
+      max-width: 850px;
+    }
+
+    section {
+      padding: 72px 20px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .policy-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 14px 34px rgba(7, 24, 39, 0.08);
+    }
+
+    .policy-card h2 {
+      color: var(--navy);
+      font-size: 30px;
+      line-height: 1.15;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card h2:first-child {
+      margin-top: 0;
+    }
+
+    .policy-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+
+    .policy-card ul {
+      margin: 12px 0 20px 22px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .policy-card li {
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      background: #eef6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 22px;
+      padding: 22px;
+      margin: 24px 0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    footer {
+      background: #04111d;
+      color: #cbd5e1;
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ffffff;
+      font-weight: 700;
+      margin: 0 8px;
+    }
+
+    .mobile-sticky {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 58px 18px 48px;
+      }
+
+      section {
+        padding: 54px 18px;
+      }
+
+      .policy-card {
+        padding: 24px;
+      }
+
+      .mobile-sticky {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        background: var(--navy);
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .mobile-sticky a {
+        color: var(--white);
+        text-align: center;
+        padding: 12px 6px;
+        font-weight: 900;
+        font-size: 14px;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      footer {
+        padding-bottom: 78px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Privacy Policy — Carey Web Services</div>
+      <div><a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a></div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <strong>Carey Web Services</strong>
+        <span>Simple websites for Irish service businesses</span>
+      </a>
+
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="samples.html">Samples</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="badge">Privacy Policy</div>
+        <h1>Privacy Policy</h1>
+        <p>
+          This page explains how Carey Web Services collects, uses and protects information
+          when customers contact us about simple websites for service businesses.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="policy-card">
+
+          <h2>1. Who we are</h2>
+          <p>
+            Carey Web Services builds simple one-page websites for Irish service businesses,
+            tradesmen, contractors, clubs, events and local services.
+          </p>
+          <p>
+            Website: careywebservices.ie<br>
+            Email: careywebservicesireland@gmail.com
+          </p>
+
+          <h2>2. Information we may collect</h2>
+          <p>
+            When you contact Carey Web Services by phone, WhatsApp or email, we may collect information such as:
+          </p>
+          <ul>
+            <li>Your name</li>
+            <li>Your business name</li>
+            <li>Your phone number</li>
+            <li>Your WhatsApp number</li>
+            <li>Your email address</li>
+            <li>Your business services</li>
+            <li>Your business location or service area</li>
+            <li>Photos, logos or text you send for your website</li>
+            <li>Information needed to prepare a website quote or build your website</li>
+          </ul>
+
+          <h2>3. How we use your information</h2>
+          <p>
+            We use your information to:
+          </p>
+          <ul>
+            <li>Reply to your enquiry</li>
+            <li>Prepare a website quote</li>
+            <li>Build or update your website</li>
+            <li>Set up contact buttons, service details and website content</li>
+            <li>Help with domain setup or Google Business Profile details, where requested</li>
+            <li>Keep basic records of work completed and payments received</li>
+          </ul>
+
+          <h2>4. Legal basis for using your information</h2>
+          <p>
+            We use your information because you have contacted us about a service, asked for a quote,
+            or requested website work. This is necessary so we can respond to you and provide the service.
+          </p>
+
+          <h2>5. Sharing your information</h2>
+          <p>
+            Carey Web Services does not sell your personal information.
+          </p>
+          <p>
+            We may need to use trusted third-party services when setting up or managing your website, such as:
+          </p>
+          <ul>
+            <li>Domain providers</li>
+            <li>Website hosting platforms</li>
+            <li>Google Business Profile tools</li>
+            <li>Email or communication services</li>
+            <li>Payment services such as Revolut, where used</li>
+          </ul>
+
+          <h2>6. Customer ownership of accounts</h2>
+          <p>
+            Customers should ideally own their own domain name and Google Business Profile.
+            Carey Web Services may be added as a manager or helper where needed, but passwords should not be shared.
+          </p>
+
+          <h2>7. How long we keep information</h2>
+          <p>
+            We keep customer information only for as long as needed to reply to enquiries, complete website work,
+            provide support, keep business records, and meet legal or tax obligations.
+          </p>
+
+          <h2>8. Your rights</h2>
+          <p>
+            You can contact Carey Web Services to ask about the information we hold about you.
+            You may ask for information to be corrected or deleted where appropriate.
+          </p>
+
+          <h2>9. Website tracking and cookies</h2>
+          <p>
+            This website may use basic technical features needed for the website to work. If analytics,
+            advertising pixels or extra tracking tools are added in the future, the cookie policy may be updated.
+          </p>
+
+          <div class="notice">
+            Carey Web Services currently focuses on simple service websites. This website is not an online shop
+            and does not process online orders through this site.
+          </div>
+
+          <h2>10. Contact about privacy</h2>
+          <p>
+            For any privacy questions, contact Carey Web Services by email:
+          </p>
+          <p>
+            careywebservicesireland@gmail.com
+          </p>
+
+          <h2>11. Updates to this policy</h2>
+          <p>
+            This Privacy Policy may be updated from time to time as the business, website or services change.
+          </p>
+
+          <p>
+            Last updated: June 2026
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Carey Web Services.
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </p>
+  </footer>
+
+  <div class="mobile-sticky">
+    <a href="tel:+353857800352">Call</a>
+    <a href="https://wa.me/353857800352">WhatsApp</a>
+    <a href="mailto:careywebservicesireland@gmail.com">Email</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Carey Web Services | Simple Websites for Irish Service Businesses</title>
+
+  <meta name="description" content="Carey Web Services builds simple, affordable one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors. Every website includes call, WhatsApp, email, photos, services, Google map, domain setup and one-to-one support." />
+
+  <meta name="keywords" content="simple websites Ireland, one-page websites Ireland, websites for tradesmen Ireland, service business websites Ireland, affordable websites for small businesses Ireland, website with WhatsApp button, website with call button, website for cleaners Ireland, website for tree surgeons Ireland, website for landscapers Ireland, website for power washing business Ireland, small business website Cork, Carey Web Services" />
+
+  <meta name="author" content="Carey Web Services" />
+
+  <meta property="og:title" content="Carey Web Services | Simple Websites for Irish Service Businesses" />
+  <meta property="og:description" content="Clean one-page websites for Irish service businesses with call, WhatsApp, email, photos, services, Google map and domain setup." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://careywebservices.ie" />
+
+  <style>
+    :root {
+      --navy: #071827;
+      --navy-soft: #102a43;
+      --blue: #1e88e5;
+      --green: #22c55e;
+      --gold: #f5b942;
+      --white: #ffffff;
+      --off-white: #f7fafc;
+      --text: #1f2937;
+      --muted: #64748b;
+      --card: #ffffff;
+      --border: #dbe3ea;
+      --shadow: 0 20px 50px rgba(7, 24, 39, 0.14);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .top-bar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      color: var(--navy);
+      font-size: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .menu a {
+      padding: 8px 4px;
+    }
+
+    .menu a:hover {
+      color: var(--blue);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 36px;
+      left: 0;
+      min-width: 260px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 10px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--off-white);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--navy);
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--navy-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--navy);
+      border-color: var(--border);
+    }
+
+    .btn-light:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.24), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(30, 136, 229, 0.22), transparent 36%),
+        linear-gradient(135deg, #071827 0%, #102a43 100%);
+      color: var(--white);
+      padding: 88px 20px 70px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      font-size: 19px;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: #e5f4ff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .trust-pill {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--navy);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      background: var(--off-white);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      font-weight: 700;
+    }
+
+    .tick {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    section {
+      padding: 72px 20px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-head span {
+      color: var(--blue);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    .section-head h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin: 8px 0 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 12px 28px rgba(7, 24, 39, 0.07);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .service-pill {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      font-weight: 800;
+      color: var(--navy);
+      box-shadow: 0 8px 18px rgba(7, 24, 39, 0.05);
+    }
+
+    .includes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .include-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 16px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .pricing {
+      background: #eef6ff;
+    }
+
+    .price-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price {
+      font-size: 42px;
+      color: var(--navy);
+      font-weight: 900;
+      margin: 12px 0;
+    }
+
+    .price small {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .popular {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .features {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .features li {
+      list-style: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .sample-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .sample-image {
+      height: 150px;
+      background:
+        linear-gradient(135deg, rgba(7, 24, 39, 0.88), rgba(30, 136, 229, 0.62)),
+        repeating-linear-gradient(45deg, #dbeafe, #dbeafe 12px, #eef6ff 12px, #eef6ff 24px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 900;
+      font-size: 22px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sample-content {
+      padding: 22px;
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 62px;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .notice {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .notice p {
+      color: #dbeafe;
+      margin-top: 8px;
+      font-size: 17px;
+    }
+
+    .portfolio-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 18px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 18px;
+    }
+
+    .portfolio-item strong {
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .portfolio-item span {
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.2), transparent 32%),
+        linear-gradient(135deg, #071827, #102a43);
+      color: var(--white);
+    }
+
+    .contact .section-head h2,
+    .contact .section-head p {
+      color: var(--white);
+    }
+
+    .contact-card {
+      background: var(--white);
+      color: var(--navy);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    footer {
+      background: #04111d;
+      color: #cbd5e1;
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .mobile-sticky {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .grid-3,
+      .grid-2,
+      .notice {
+        grid-template-columns: 1fr;
+      }
+
+      .service-list,
+      .includes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .hero {
+        padding: 58px 18px 48px;
+      }
+
+      section {
+        padding: 54px 18px;
+      }
+
+      .service-list,
+      .includes {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .mobile-sticky {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        background: var(--navy);
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .mobile-sticky a {
+        color: var(--white);
+        text-align: center;
+        padding: 12px 6px;
+        font-weight: 900;
+        font-size: 14px;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      footer {
+        padding-bottom: 78px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Carey Web Services",
+    "url": "https://careywebservices.ie",
+    "email": "careywebservicesireland@gmail.com",
+    "areaServed": "Ireland",
+    "description": "Carey Web Services builds simple one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors.",
+    "priceRange": "€399-€799",
+    "founder": {
+      "@type": "Person",
+      "name": "Noel Carey"
+    },
+    "serviceType": [
+      "One-page websites",
+      "Service business websites",
+      "Website setup",
+      "Domain setup",
+      "Google Business Profile help"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Carey Web Services — simple websites for Irish service businesses</div>
+      <div>
+        <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <strong>Carey Web Services</strong>
+        <span>Simple websites. Clear pricing. One-to-one support.</span>
+      </a>
+
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="#what-i-build">Services</a>
+        <a href="#packages">Packages</a>
+
+        <div class="dropdown">
+          <a href="#samples">Samples ▼</a>
+          <div class="dropdown-content">
+            <a href="tree-services-sample.html">Tree Services Website</a>
+            <a href="cleaning-services-sample.html">Cleaning Services Website</a>
+            <a href="power-washing-sample.html">Power Washing Website</a>
+            <a href="garden-services-sample.html">Garden Services Website</a>
+            <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
+            <a href="club-event-sample.html">Club / Event Website</a>
+          </div>
+        </div>
+
+        <a href="#how-it-works">How It Works</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com">Email</a>
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">Irish service business websites</div>
+
+          <h1>Simple Websites for Irish Service Businesses</h1>
+
+          <p>
+            Carey Web Services builds clean, mobile-friendly one-page websites for tradesmen,
+            contractors, clubs and local services across Ireland. Every website is designed to
+            help customers call, WhatsApp or email you quickly.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#packages">View Website Packages</a>
+            <a class="btn btn-light" href="#samples">View Sample Websites</a>
+          </div>
+
+          <div class="trust-row">
+            <span class="trust-pill">Call button</span>
+            <span class="trust-pill">WhatsApp button</span>
+            <span class="trust-pill">Email button</span>
+            <span class="trust-pill">Google map</span>
+            <span class="trust-pill">Domain setup</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Built for real service businesses</h2>
+          <p>
+            No online shops. No complicated systems. Just a professional website that shows your
+            services and makes it easy for customers to contact you.
+          </p>
+
+          <div class="mini-list">
+            <div class="mini-item"><span class="tick">✓</span> Ideal for cleaners, tree surgeons, landscapers and tradesmen</div>
+            <div class="mini-item"><span class="tick">✓</span> Fast one-page websites with clear contact buttons</div>
+            <div class="mini-item"><span class="tick">✓</span> Personal one-to-one support from Noel Carey</div>
+            <div class="mini-item"><span class="tick">✓</span> Search-friendly wording for Google</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-i-build">
+      <div class="container">
+        <div class="section-head">
+          <span>What I Build</span>
+          <h2>Affordable websites for local service businesses</h2>
+          <p>
+            Carey Web Services is for small Irish businesses that need a clean online presence
+            without big agency prices or complicated technology.
+          </p>
+        </div>
+
+        <div class="service-list">
+          <div class="service-pill">Tree Services</div>
+          <div class="service-pill">Garden Services</div>
+          <div class="service-pill">Cleaning Services</div>
+          <div class="service-pill">Power Washing</div>
+          <div class="service-pill">Roofers</div>
+          <div class="service-pill">Painters</div>
+          <div class="service-pill">Mechanics</div>
+          <div class="service-pill">Motorcycle Services</div>
+          <div class="service-pill">Handymen</div>
+          <div class="service-pill">Clubs</div>
+          <div class="service-pill">Events</div>
+          <div class="service-pill">Local Contractors</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span>Included</span>
+          <h2>Everything needed to get your business online</h2>
+          <p>
+            Every website is built to be simple, mobile-friendly and focused on enquiries.
+            The goal is to help customers contact you quickly.
+          </p>
+        </div>
+
+        <div class="includes">
+          <div class="include-item">✓ Call button</div>
+          <div class="include-item">✓ WhatsApp button</div>
+          <div class="include-item">✓ Email button</div>
+          <div class="include-item">✓ Services section</div>
+          <div class="include-item">✓ Photos or gallery</div>
+          <div class="include-item">✓ Google map</div>
+          <div class="include-item">✓ Mobile-friendly design</div>
+          <div class="include-item">✓ Domain setup</div>
+          <div class="include-item">✓ Google Business Profile help</div>
+          <div class="include-item">✓ Simple SEO wording</div>
+          <div class="include-item">✓ Fast loading pages</div>
+          <div class="include-item">✓ 30 days of small changes</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span>Packages</span>
+          <h2>Clear website prices for Irish service businesses</h2>
+          <p>
+            Simple pricing for one-page websites, service business websites and yearly care.
+            No online shops or complicated stock systems.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card price-card">
+            <h3>Starter One-Page Website</h3>
+            <p>For a small business that needs a simple online page.</p>
+            <div class="price">€399</div>
+            <ul class="features">
+              <li>✓ Business name and services</li>
+              <li>✓ Call, WhatsApp and email buttons</li>
+              <li>✓ A few photos</li>
+              <li>✓ Mobile-friendly layout</li>
+              <li>✓ Basic website wording</li>
+            </ul>
+            <a class="btn btn-dark" href="#contact">Ask About Starter</a>
+          </div>
+
+          <div class="card price-card">
+            <div class="popular">Most Popular</div>
+            <h3>Standard Service Website</h3>
+            <p>The best package for most local service businesses.</p>
+            <div class="price">€599</div>
+            <ul class="features">
+              <li>✓ Everything in Starter</li>
+              <li>✓ Domain setup</li>
+              <li>✓ Google map</li>
+              <li>✓ Photo gallery</li>
+              <li>✓ Service areas</li>
+              <li>✓ Google Business Profile help</li>
+              <li>✓ 30 days of small changes</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Ask About Standard</a>
+          </div>
+
+          <div class="card price-card">
+            <h3>Premium Service Website</h3>
+            <p>For businesses that want a stronger page with more detail.</p>
+            <div class="price">€799</div>
+            <ul class="features">
+              <li>✓ Everything in Standard</li>
+              <li>✓ More sections</li>
+              <li>✓ Before-and-after gallery</li>
+              <li>✓ Reviews section</li>
+              <li>✓ Extra service wording</li>
+              <li>✓ Stronger layout</li>
+            </ul>
+            <a class="btn btn-dark" href="#contact">Ask About Premium</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="samples">
+      <div class="container">
+        <div class="section-head">
+          <span>Sample Websites</span>
+          <h2>Pick a sample and make it your own</h2>
+          <p>
+            Choose a sample website, send your business name, phone number, services and photos,
+            and I can turn it into your own service website.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card sample-card">
+            <div class="sample-image">Tree Services Website</div>
+            <div class="sample-content">
+              <h3>Tree Services Sample</h3>
+              <p>A sample website for tree surgeons, hedge cutting, garden clearance and timber services.</p>
+              <a class="btn btn-light" href="tree-services-sample.html">View Sample</a>
+            </div>
+          </div>
+
+          <div class="card sample-card">
+            <div class="sample-image">Cleaning Services Website</div>
+            <div class="sample-content">
+              <h3>Cleaning Services Sample</h3>
+              <p>A sample website for domestic cleaners, commercial cleaners and local cleaning services.</p>
+              <a class="btn btn-light" href="cleaning-services-sample.html">View Sample</a>
+            </div>
+          </div>
+
+          <div class="card sample-card">
+            <div class="sample-image">Power Washing Website</div>
+            <div class="sample-content">
+              <h3>Power Washing Sample</h3>
+              <p>A sample website for driveway cleaning, patio cleaning, walls, paths and exterior cleaning.</p>
+              <a class="btn btn-light" href="power-washing-sample.html">View Sample</a>
+            </div>
+          </div>
+
+          <div class="card sample-card">
+            <div class="sample-image">Garden Services Website</div>
+            <div class="sample-content">
+              <h3>Garden Services Sample</h3>
+              <p>A sample website for grass cutting, hedge trimming, garden maintenance and landscaping.</p>
+              <a class="btn btn-light" href="garden-services-sample.html">View Sample</a>
+            </div>
+          </div>
+
+          <div class="card sample-card">
+            <div class="sample-image">Motorcycle Services Website</div>
+            <div class="sample-content">
+              <h3>Motorcycle Services Sample</h3>
+              <p>A sample website for diagnostics, servicing, repairs and mobile motorcycle services.</p>
+              <a class="btn btn-light" href="motorcycle-services-sample.html">View Sample</a>
+            </div>
+          </div>
+
+          <div class="card sample-card">
+            <div class="sample-image">Club / Event Website</div>
+            <div class="sample-content">
+              <h3>Club / Event Sample</h3>
+              <p>A sample website for motorcycle clubs, rowing clubs, small events and local groups.</p>
+              <a class="btn btn-light" href="club-event-sample.html">View Sample</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <span>How It Works</span>
+          <h2>A simple process from start to launch</h2>
+          <p>
+            The process is kept clear so small businesses can get online without confusion.
+          </p>
+        </div>
+
+        <div class="grid grid-2 steps">
+          <div class="card step">
+            <h3>Send your details</h3>
+            <p>Send your business name, phone number, email, services, area covered and photos.</p>
+          </div>
+
+          <div class="card step">
+            <h3>Pick a sample or style</h3>
+            <p>Choose a sample website or ask for a similar clean layout for your business.</p>
+          </div>
+
+          <div class="card step">
+            <h3>I build the website</h3>
+            <p>I create a clean one-page website designed for calls, WhatsApp messages and enquiries.</p>
+          </div>
+
+          <div class="card step">
+            <h3>Your website goes live</h3>
+            <p>I connect the domain, test the buttons, check the mobile layout and help with Google.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="notice">
+          <div>
+            <h2>Service websites only</h2>
+            <p>
+              Carey Web Services specialises in simple websites for service businesses.
+              I do not build online shops, product stock systems or complicated booking platforms.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Start Your Website</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <span>Portfolio</span>
+          <h2>Websites and projects I have worked on</h2>
+          <p>
+            Here are examples of websites and projects I have built or worked on. These show the type
+            of clean, practical website style available through Carey Web Services.
+          </p>
+        </div>
+
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <div>
+              <strong>Carey Tree and Garden Services</strong>
+              <span>Service website with phone, email, WhatsApp, photos and local service wording.</span>
+            </div>
+            <a class="btn btn-light" href="#">View Project</a>
+          </div>
+
+          <div class="portfolio-item">
+            <div>
+              <strong>WeddingApp.ie</strong>
+              <span>Landing page style website for a private wedding app idea and guest photo system.</span>
+            </div>
+            <a class="btn btn-light" href="#">View Project</a>
+          </div>
+
+          <div class="portfolio-item">
+            <div>
+              <strong>MotoCoach Dashboard</strong>
+              <span>Motorcycle coaching and dashboard-style web project.</span>
+            </div>
+            <a class="btn btn-light" href="#">View Project</a>
+          </div>
+
+          <div class="portfolio-item">
+            <div>
+              <strong>RowXL</strong>
+              <span>Rowing app and digital platform project for athletes, rigging and training tools.</span>
+            </div>
+            <a class="btn btn-light" href="#">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <span>Contact</span>
+          <h2>Get your business online</h2>
+          <p>
+            Send your business name, services, photos and contact details, and I’ll tell you what
+            website package suits you best.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Contact Carey Web Services</h3>
+          <p>
+            For a simple one-page website, service business website, domain setup or Google Business
+            Profile help, contact Noel at Carey Web Services.
+          </p>
+
+          <div class="contact-buttons">
+            <a class="btn btn-dark" href="tel:+353857800352">Call Noel</a>
+            <a class="btn btn-primary" href="https://wa.me/353857800352">WhatsApp Noel</a>
+            <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com">Email Carey Web Services</a>
+          </div>
+
+          <p style="margin-top: 18px; color: #64748b;">
+            Email: careywebservicesireland@gmail.com<br />
+            Website: careywebservices.ie
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Carey Web Services. Simple websites for Irish service businesses.
+      One-page websites, service websites, domain setup and Google Business Profile help.
+    </p>
+  </footer>
+
+  <div class="mobile-sticky">
+    <a href="tel:+353857800352">Call</a>
+    <a href="https://wa.me/353857800352">WhatsApp</a>
+    <a href="mailto:careywebservicesireland@gmail.com">Email</a>
+  </div>
+
+</body>
+</html>

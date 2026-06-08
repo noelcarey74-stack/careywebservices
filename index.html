@@ -6,14 +6,14 @@
 
   <title>Carey Web Services | Simple Websites for Irish Service Businesses</title>
 
-  <meta name="description" content="Carey Web Services builds simple, affordable one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors. Every website includes call, WhatsApp, email, photos, services, Google map, domain setup and one-to-one support." />
+  <meta name="description" content="Carey Web Services builds simple, affordable one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors. Website packages can include call buttons, WhatsApp buttons, email, photos, Google map, domain setup, social media links, business cards and QR code review cards." />
 
-  <meta name="keywords" content="simple websites Ireland, one-page websites Ireland, websites for tradesmen Ireland, service business websites Ireland, affordable websites for small businesses Ireland, website with WhatsApp button, website with call button, website for cleaners Ireland, website for tree surgeons Ireland, website for landscapers Ireland, website for power washing business Ireland, small business website Cork, Carey Web Services" />
+  <meta name="keywords" content="simple websites Ireland, one-page websites Ireland, websites for tradesmen Ireland, service business websites Ireland, affordable websites for small businesses Ireland, website with WhatsApp button, website with call button, website for cleaners Ireland, website for tree surgeons Ireland, website for landscapers Ireland, website for power washing business Ireland, small business website Cork, business cards with QR codes Ireland, Google review cards Ireland, social media buttons for website, Carey Web Services" />
 
   <meta name="author" content="Carey Web Services" />
 
   <meta property="og:title" content="Carey Web Services | Simple Websites for Irish Service Businesses" />
-  <meta property="og:description" content="Clean one-page websites for Irish service businesses with call, WhatsApp, email, photos, services, Google map and domain setup." />
+  <meta property="og:description" content="Clean one-page websites for Irish service businesses with call, WhatsApp, email, photos, services, Google map, domain setup and optional business extras like QR code cards and social media links." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://careywebservices.ie" />
 
@@ -429,6 +429,63 @@
       color: var(--navy);
     }
 
+    .extras {
+      background:
+        radial-gradient(circle at top right, rgba(245, 185, 66, 0.18), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+      border-top: 1px solid #dbeafe;
+      border-bottom: 1px solid #dbeafe;
+    }
+
+    .extra-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .extra-card::after {
+      content: "";
+      position: absolute;
+      right: -38px;
+      top: -38px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.14);
+    }
+
+    .extra-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .extras-note {
+      margin-top: 28px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 26px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .extras-note p {
+      color: #dbeafe;
+      margin-top: 8px;
+      font-size: 17px;
+    }
+
     .pricing {
       background: #eef6ff;
     }
@@ -622,7 +679,8 @@
       .hero-inner,
       .grid-3,
       .grid-2,
-      .notice {
+      .notice,
+      .extras-note {
         grid-template-columns: 1fr;
       }
 
@@ -703,7 +761,7 @@
     "url": "https://careywebservices.ie",
     "email": "careywebservicesireland@gmail.com",
     "areaServed": "Ireland",
-    "description": "Carey Web Services builds simple one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors.",
+    "description": "Carey Web Services builds simple one-page websites for Irish service businesses, tradesmen, cleaners, tree surgeons, landscapers, power washing businesses, clubs and local contractors. Optional extras include QR code business cards, Google review cards, social media buttons and printable PDF designs.",
     "priceRange": "€399-€799",
     "founder": {
       "@type": "Person",
@@ -714,7 +772,11 @@
       "Service business websites",
       "Website setup",
       "Domain setup",
-      "Google Business Profile help"
+      "Google Business Profile help",
+      "Business cards with QR codes",
+      "Google review cards",
+      "Social media buttons",
+      "Printable PDF designs"
     ]
   }
   </script>
@@ -724,7 +786,7 @@
 
   <div class="top-bar">
     <div class="top-bar-inner">
-      <div>Carey Web Services — simple websites for Irish service businesses</div>
+      <div>Carey Web Services — simple websites and business extras for Irish service businesses</div>
       <div>
         <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>
       </div>
@@ -755,6 +817,7 @@
           </div>
         </div>
 
+        <a href="#business-extras">Extras</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
@@ -784,7 +847,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#packages">View Website Packages</a>
-            <a class="btn btn-light" href="#samples">View Sample Websites</a>
+            <a class="btn btn-light" href="#business-extras">View Business Extras</a>
           </div>
 
           <div class="trust-row">
@@ -792,6 +855,7 @@
             <span class="trust-pill">WhatsApp button</span>
             <span class="trust-pill">Email button</span>
             <span class="trust-pill">Google map</span>
+            <span class="trust-pill">QR code cards</span>
             <span class="trust-pill">Domain setup</span>
           </div>
         </div>
@@ -806,6 +870,7 @@
           <div class="mini-list">
             <div class="mini-item"><span class="tick">✓</span> Ideal for cleaners, tree surgeons, landscapers and tradesmen</div>
             <div class="mini-item"><span class="tick">✓</span> Fast one-page websites with clear contact buttons</div>
+            <div class="mini-item"><span class="tick">✓</span> Optional business cards and review cards with QR codes</div>
             <div class="mini-item"><span class="tick">✓</span> Personal one-to-one support from Noel Carey</div>
             <div class="mini-item"><span class="tick">✓</span> Search-friendly wording for Google</div>
           </div>
@@ -869,6 +934,87 @@
       </div>
     </section>
 
+    <section id="business-extras" class="extras">
+      <div class="container">
+        <div class="section-head">
+          <span>Business Extras</span>
+          <h2>Small touches that make a business look more professional</h2>
+          <p>
+            Along with your website, Carey Web Services can help with the extra details that make
+            a small business look sharp online and offline — QR codes, business cards, review cards,
+            social media buttons and printable PDF designs.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card extra-card">
+            <div class="extra-icon">QR</div>
+            <h3>Business cards with QR code</h3>
+            <p>
+              A clean business card design with your phone number, website, email, services and a QR code
+              that brings customers straight to your website.
+            </p>
+          </div>
+
+          <div class="card extra-card">
+            <div class="extra-icon">★</div>
+            <h3>Google review cards</h3>
+            <p>
+              A simple review card that customers can scan after a job. The QR code can bring them
+              straight to your Google review page.
+            </p>
+          </div>
+
+          <div class="card extra-card">
+            <div class="extra-icon">#</div>
+            <h3>Social media buttons</h3>
+            <p>
+              Facebook, Instagram, X or other social links can be added to your website so customers
+              can find your business across different platforms.
+            </p>
+          </div>
+
+          <div class="card extra-card">
+            <div class="extra-icon">PDF</div>
+            <h3>Printable PDF designs</h3>
+            <p>
+              Business cards, review cards, posters or flyers can be created as PDF files ready for
+              printing or sharing with customers.
+            </p>
+          </div>
+
+          <div class="card extra-card">
+            <div class="extra-icon">G</div>
+            <h3>Google Business Profile help</h3>
+            <p>
+              Help with adding your website link, services, photos and contact details to your Google
+              Business Profile.
+            </p>
+          </div>
+
+          <div class="card extra-card">
+            <div class="extra-icon">✓</div>
+            <h3>A more complete business setup</h3>
+            <p>
+              The aim is simple: your website, contact buttons, social links, QR cards and Google profile
+              all working together.
+            </p>
+          </div>
+        </div>
+
+        <div class="extras-note">
+          <div>
+            <h2>More than just a website</h2>
+            <p>
+              These extras are optional, but they can help a small service business look more professional
+              from day one.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Ask About Business Extras</a>
+        </div>
+      </div>
+    </section>
+
     <section id="packages" class="pricing">
       <div class="container">
         <div class="section-head">
@@ -876,7 +1022,7 @@
           <h2>Clear website prices for Irish service businesses</h2>
           <p>
             Simple pricing for one-page websites, service business websites and yearly care.
-            No online shops or complicated stock systems.
+            Optional business extras can be added if needed.
           </p>
         </div>
 
@@ -1012,7 +1158,7 @@
         <div class="grid grid-2 steps">
           <div class="card step">
             <h3>Send your details</h3>
-            <p>Send your business name, phone number, email, services, area covered and photos.</p>
+            <p>Send your business name, phone number, email, services, area covered, photos and social media links if you have them.</p>
           </div>
 
           <div class="card step">
@@ -1026,8 +1172,18 @@
           </div>
 
           <div class="card step">
+            <h3>Add extras if needed</h3>
+            <p>Business cards, review cards, QR codes and social media buttons can be added as optional extras.</p>
+          </div>
+
+          <div class="card step">
             <h3>Your website goes live</h3>
             <p>I connect the domain, test the buttons, check the mobile layout and help with Google.</p>
+          </div>
+
+          <div class="card step">
+            <h3>You can share your business online and offline</h3>
+            <p>Your website link, QR cards and social media links can help customers find and contact you faster.</p>
           </div>
         </div>
       </div>
@@ -1062,36 +1218,40 @@
         <div class="portfolio-list">
           <div class="portfolio-item">
             <div>
-              <strong>Carey Tree and Garden Services</strong>
+              <strong>Tree Services Sample</strong>
               <span>Service website with phone, email, WhatsApp, photos and local service wording.</span>
             </div>
-            <a class="btn btn-light" href="#">View Project</a>
+            <a class="btn btn-light" href="tree-services-sample.html">View Project</a>
           </div>
 
           <div class="portfolio-item">
             <div>
-              <strong>WeddingApp.ie</strong>
-              <span>Landing page style website for a private wedding app idea and guest photo system.</span>
+              <strong>Cleaning Services Sample</strong>
+              <span>One-page sample website for domestic and commercial cleaning services.</span>
             </div>
-            <a class="btn btn-light" href="#">View Project</a>
+            <a class="btn btn-light" href="cleaning-services-sample.html">View Project</a>
           </div>
 
           <div class="portfolio-item">
             <div>
-              <strong>MotoCoach Dashboard</strong>
-              <span>Motorcycle coaching and dashboard-style web project.</span>
+              <strong>Motorcycle Services Sample</strong>
+              <span>Service website sample for diagnostics, servicing, repairs and motorcycle support.</span>
             </div>
-            <a class="btn btn-light" href="#">View Project</a>
+            <a class="btn btn-light" href="motorcycle-services-sample.html">View Project</a>
           </div>
 
           <div class="portfolio-item">
             <div>
-              <strong>RowXL</strong>
-              <span>Rowing app and digital platform project for athletes, rigging and training tools.</span>
+              <strong>Club / Event Sample</strong>
+              <span>One-page sample website for clubs, events, sponsors and local groups.</span>
             </div>
-            <a class="btn btn-light" href="#">View Project</a>
+            <a class="btn btn-light" href="club-event-sample.html">View Project</a>
           </div>
         </div>
+
+        <p style="margin-top: 24px;">
+          <a class="btn btn-dark" href="portfolio.html">View Full Portfolio Page</a>
+        </p>
       </div>
     </section>
 
@@ -1101,16 +1261,16 @@
           <span>Contact</span>
           <h2>Get your business online</h2>
           <p>
-            Send your business name, services, photos and contact details, and I’ll tell you what
-            website package suits you best.
+            Send your business name, services, photos, social media links and contact details,
+            and I’ll tell you what website package suits you best.
           </p>
         </div>
 
         <div class="contact-card">
           <h3>Contact Carey Web Services</h3>
           <p>
-            For a simple one-page website, service business website, domain setup or Google Business
-            Profile help, contact Noel at Carey Web Services.
+            For a simple one-page website, service business website, domain setup, Google Business
+            Profile help, business cards, review cards or QR code extras, contact Noel at Carey Web Services.
           </p>
 
           <div class="contact-buttons">
@@ -1132,7 +1292,7 @@
   <footer>
     <p>
       © 2026 Carey Web Services. Simple websites for Irish service businesses.<br />
-      One-page websites, service websites, domain setup and Google Business Profile help.
+      One-page websites, service websites, domain setup, QR code cards and Google Business Profile help.
     </p>
 
     <p class="footer-links">

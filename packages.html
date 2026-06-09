@@ -11,6 +11,14 @@
   <meta name="keywords" content="website packages Ireland, one-page website prices Ireland, affordable website design Ireland, website cost Ireland, websites for tradesmen Ireland, service business websites Ireland, small business website prices, business cards with QR codes Ireland, Google review cards Ireland, Carey Web Services" />
 
   <meta name="author" content="Carey Web Services" />
+  <meta name="theme-color" content="#071827" />
+
+  <link rel="canonical" href="https://careywebservices.ie/packages.html" />
+
+  <meta property="og:title" content="Website Packages Ireland | Carey Web Services" />
+  <meta property="og:description" content="Launch website packages for Irish service businesses. Simple one-page websites with call, WhatsApp, email and social media buttons included where needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://careywebservices.ie/packages.html" />
 
   <style>
     :root {
@@ -96,6 +104,7 @@
       display: flex;
       flex-direction: column;
       line-height: 1.1;
+      flex: 0 0 auto;
     }
 
     .brand strong {
@@ -142,6 +151,7 @@
       border-radius: 16px;
       box-shadow: var(--shadow);
       padding: 10px;
+      z-index: 300;
     }
 
     .dropdown-content a {
@@ -165,6 +175,88 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .mobile-menu {
+      display: none;
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 16px;
+    }
+
+    .mobile-menu details {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 10px 24px rgba(7, 24, 39, 0.08);
+      overflow: hidden;
+    }
+
+    .mobile-menu summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      color: var(--navy);
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-menu summary span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mobile-menu .menu-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .mobile-menu-grid {
+      display: grid;
+      gap: 8px;
+      padding: 0 14px 14px;
+    }
+
+    .mobile-menu-grid a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .mobile-menu-grid a:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .mobile-menu-grid .mobile-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 12px 4px 2px;
     }
 
     .btn {
@@ -349,12 +441,6 @@
       margin: 14px 0;
     }
 
-    .price small {
-      font-size: 16px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
     .features {
       display: grid;
       gap: 10px;
@@ -452,13 +538,20 @@
       margin-bottom: 12px;
     }
 
+    .compare-wrap {
+      overflow-x: auto;
+      border-radius: 22px;
+      box-shadow: 0 12px 28px rgba(7, 24, 39, 0.07);
+      background: var(--white);
+    }
+
     .compare-table {
       width: 100%;
       border-collapse: collapse;
+      min-width: 720px;
       overflow: hidden;
       border-radius: 22px;
       background: var(--white);
-      box-shadow: 0 12px 28px rgba(7, 24, 39, 0.07);
     }
 
     .compare-table th,
@@ -543,35 +636,82 @@
         grid-template-columns: 1fr;
       }
 
-      .menu {
+      .menu,
+      .nav-actions {
         display: none;
       }
 
       .nav {
         align-items: flex-start;
+        padding-bottom: 12px;
       }
 
-      .compare-table {
-        font-size: 14px;
+      .mobile-menu {
+        display: block;
       }
     }
 
     @media (max-width: 640px) {
+      .top-bar {
+        padding: 14px 18px;
+      }
+
       .top-bar-inner {
         justify-content: center;
         text-align: center;
+        gap: 8px;
       }
 
-      .nav-actions {
-        display: none;
+      .top-bar-inner div {
+        width: 100%;
+      }
+
+      .nav {
+        padding: 18px 20px 12px;
+      }
+
+      .brand strong {
+        font-size: 30px;
+        line-height: 1.05;
+      }
+
+      .brand span {
+        font-size: 16px;
+        line-height: 1.25;
+        max-width: 330px;
       }
 
       .hero {
         padding: 58px 18px 48px;
       }
 
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+        letter-spacing: -1.8px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .hero-actions .btn,
+      .contact-buttons .btn {
+        width: 100%;
+      }
+
       section {
         padding: 54px 18px;
+      }
+
+      .popular {
+        position: static;
+        display: inline-flex;
+        margin-bottom: 12px;
+      }
+
+      .care-box {
+        padding: 28px;
       }
 
       .compare-table th,
@@ -594,14 +734,14 @@
       .mobile-sticky a {
         color: var(--white);
         text-align: center;
-        padding: 12px 6px;
+        padding: 14px 6px;
         font-weight: 900;
-        font-size: 14px;
+        font-size: 15px;
         border-right: 1px solid rgba(255, 255, 255, 0.12);
       }
 
       footer {
-        padding-bottom: 78px;
+        padding-bottom: 84px;
       }
     }
   </style>
@@ -613,7 +753,7 @@
     <div class="top-bar-inner">
       <div>Launch website packages for Irish service businesses</div>
       <div>
-        <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>
+        <a href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Packages%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20package.%0D%0A%0D%0APage%3A%20Packages%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0APackage%20I%27m%20interested%20in%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">careywebservicesireland@gmail.com</a>
       </div>
     </div>
   </div>
@@ -649,10 +789,38 @@
       </div>
 
       <div class="nav-actions">
-        <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com">Email</a>
+        <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Packages%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20package.%0D%0A%0D%0APage%3A%20Packages%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0APackage%20I%27m%20interested%20in%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email</a>
         <a class="btn btn-primary" href="contact.html">Get a Quote</a>
       </div>
     </nav>
+
+    <div class="mobile-menu">
+      <details>
+        <summary>
+          <span><span class="menu-icon">☰</span> Menu</span>
+          <span>Open</span>
+        </summary>
+
+        <div class="mobile-menu-grid">
+          <a href="index.html">Home</a>
+          <a href="index.html#what-i-build">Services</a>
+          <a href="packages.html">Packages</a>
+          <a href="samples.html">Samples</a>
+          <a href="business-extras.html">Extras</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+
+          <div class="mobile-subtitle">Sample Websites</div>
+          <a href="tree-services-sample.html">Tree Services Website</a>
+          <a href="cleaning-services-sample.html">Cleaning Services Website</a>
+          <a href="power-washing-sample.html">Power Washing Website</a>
+          <a href="garden-services-sample.html">Garden Services Website</a>
+          <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
+          <a href="club-event-sample.html">Club / Event Website</a>
+        </div>
+      </details>
+    </div>
   </header>
 
   <main>
@@ -708,7 +876,7 @@
               <li>✓ Basic website wording</li>
             </ul>
 
-            <a class="btn btn-dark" href="contact.html">Ask About Starter</a>
+            <a class="btn btn-dark" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20the%20Starter%20One-Page%20Website.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">Ask About Starter</a>
           </div>
 
           <div class="card price-card">
@@ -732,7 +900,7 @@
               <li>✓ 30 days of small changes after launch</li>
             </ul>
 
-            <a class="btn btn-primary" href="contact.html">Ask About Standard</a>
+            <a class="btn btn-primary" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20the%20Standard%20Service%20Website.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">Ask About Standard</a>
           </div>
 
           <div class="card price-card">
@@ -754,7 +922,7 @@
               <li>✓ More complete local SEO wording</li>
             </ul>
 
-            <a class="btn btn-dark" href="contact.html">Ask About Premium</a>
+            <a class="btn btn-dark" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20the%20Premium%20Service%20Website.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">Ask About Premium</a>
           </div>
         </div>
       </div>
@@ -780,7 +948,7 @@
               A clean business card design with your business name, phone number, website, email,
               services and a QR code linking directly to your website.
             </p>
-            <a class="btn btn-light" href="contact.html">Ask About Business Cards</a>
+            <a class="btn btn-light" href="business-extras.html">Ask About Business Cards</a>
           </div>
 
           <div class="card extra-card">
@@ -791,7 +959,7 @@
               A simple review card that can be printed or sent to customers. The QR code can bring
               customers straight to your Google review page.
             </p>
-            <a class="btn btn-light" href="contact.html">Ask About Review Cards</a>
+            <a class="btn btn-light" href="business-extras.html">Ask About Review Cards</a>
           </div>
 
           <div class="card extra-card">
@@ -802,7 +970,7 @@
               A simple flyer or poster design with your services, contact details and QR code,
               supplied as a PDF file ready for printing or sharing.
             </p>
-            <a class="btn btn-light" href="contact.html">Ask About Flyers</a>
+            <a class="btn btn-light" href="business-extras.html">Ask About Flyers</a>
           </div>
 
           <div class="card extra-card">
@@ -813,7 +981,7 @@
               A clean card or PDF for clubs, events, sponsors, race classes or local promotions,
               with logos, contact details and QR codes where needed.
             </p>
-            <a class="btn btn-light" href="contact.html">Ask About Sponsor Cards</a>
+            <a class="btn btn-light" href="business-extras.html">Ask About Sponsor Cards</a>
           </div>
 
           <div class="card extra-card">
@@ -824,7 +992,7 @@
               Help with adding your website link, services, photos, phone number and contact details
               to your Google Business Profile.
             </p>
-            <a class="btn btn-light" href="contact.html">Ask About Google Help</a>
+            <a class="btn btn-light" href="business-extras.html">Ask About Google Help</a>
           </div>
 
           <div class="card extra-card">
@@ -835,7 +1003,7 @@
               Website, contact buttons, social links, QR code cards and Google profile support working
               together to help your business look more professional.
             </p>
-            <a class="btn btn-dark" href="contact.html">Ask About Full Setup</a>
+            <a class="btn btn-dark" href="business-extras.html">Ask About Full Setup</a>
           </div>
         </div>
       </div>
@@ -877,78 +1045,80 @@
           </p>
         </div>
 
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Starter</th>
-              <th>Standard</th>
-              <th>Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>One-page website</td>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>Yes</td>
-            </tr>
-            <tr>
-              <td>Call, WhatsApp and email buttons</td>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>Yes</td>
-            </tr>
-            <tr>
-              <td>Social media buttons</td>
-              <td>Included where needed</td>
-              <td>Included where needed</td>
-              <td>Included where needed</td>
-            </tr>
-            <tr>
-              <td>Photos or gallery</td>
-              <td>Basic</td>
-              <td>Gallery</td>
-              <td>Advanced gallery</td>
-            </tr>
-            <tr>
-              <td>Google map</td>
-              <td>No</td>
-              <td>Yes</td>
-              <td>Yes</td>
-            </tr>
-            <tr>
-              <td>Domain setup</td>
-              <td>Optional</td>
-              <td>Included</td>
-              <td>Included</td>
-            </tr>
-            <tr>
-              <td>Google Business Profile help</td>
-              <td>No</td>
-              <td>Basic help</td>
-              <td>Stronger setup help</td>
-            </tr>
-            <tr>
-              <td>Business card with QR code</td>
-              <td>Optional</td>
-              <td>Optional</td>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <td>Google review card with QR code</td>
-              <td>Optional</td>
-              <td>Optional</td>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <td>Best for</td>
-              <td>Very small service business</td>
-              <td>Most local service businesses</td>
-              <td>Businesses wanting a stronger online presence</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Starter</th>
+                <th>Standard</th>
+                <th>Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>One-page website</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Call, WhatsApp and email buttons</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Social media buttons</td>
+                <td>Included where needed</td>
+                <td>Included where needed</td>
+                <td>Included where needed</td>
+              </tr>
+              <tr>
+                <td>Photos or gallery</td>
+                <td>Basic</td>
+                <td>Gallery</td>
+                <td>Advanced gallery</td>
+              </tr>
+              <tr>
+                <td>Google map</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Domain setup</td>
+                <td>Optional</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td>Google Business Profile help</td>
+                <td>No</td>
+                <td>Basic help</td>
+                <td>Stronger setup help</td>
+              </tr>
+              <tr>
+                <td>Business card with QR code</td>
+                <td>Optional</td>
+                <td>Optional</td>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Google review card with QR code</td>
+                <td>Optional</td>
+                <td>Optional</td>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Best for</td>
+                <td>Very small service business</td>
+                <td>Most local service businesses</td>
+                <td>Businesses wanting a stronger online presence</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <div style="height: 22px;"></div>
 
@@ -1021,8 +1191,8 @@
 
           <div class="contact-buttons">
             <a class="btn btn-dark" href="tel:+353857800352">Call Noel</a>
-            <a class="btn btn-primary" href="https://wa.me/353857800352">WhatsApp Noel</a>
-            <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com">Email Carey Web Services</a>
+            <a class="btn btn-primary" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20package.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0APackage%20I%27m%20interested%20in%3A%0AWhat%20I%20need%3A">WhatsApp Noel</a>
+            <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Packages%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20package.%0D%0A%0D%0APage%3A%20Packages%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0APackage%20I%27m%20interested%20in%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email Carey Web Services</a>
           </div>
 
           <p style="margin-top: 18px; color: #64748b;">
@@ -1051,8 +1221,8 @@
 
   <div class="mobile-sticky">
     <a href="tel:+353857800352">Call</a>
-    <a href="https://wa.me/353857800352">WhatsApp</a>
-    <a href="mailto:careywebservicesireland@gmail.com">Email</a>
+    <a href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20package.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0APackage%20I%27m%20interested%20in%3A%0AWhat%20I%20need%3A">WhatsApp</a>
+    <a href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Packages%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20package.%0D%0A%0D%0APage%3A%20Packages%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0APackage%20I%27m%20interested%20in%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email</a>
   </div>
 
 </body>

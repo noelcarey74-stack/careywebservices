@@ -11,6 +11,14 @@
   <meta name="keywords" content="contact Carey Web Services, website designer Ireland, one-page websites Ireland, service websites Ireland, affordable websites Ireland, websites for tradesmen Ireland, websites for cleaners Ireland, websites for tree surgeons Ireland, website quote Ireland, QR code business cards Ireland, Google review cards Ireland, sponsor cards Ireland, printable PDF flyers Ireland" />
 
   <meta name="author" content="Carey Web Services" />
+  <meta name="theme-color" content="#071827" />
+
+  <link rel="canonical" href="https://careywebservices.ie/contact.html" />
+
+  <meta property="og:title" content="Contact Carey Web Services | Simple Websites for Irish Service Businesses" />
+  <meta property="og:description" content="Contact Carey Web Services for simple one-page websites, service business websites, QR code business cards, review cards and printable PDF designs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://careywebservices.ie/contact.html" />
 
   <style>
     :root {
@@ -96,6 +104,7 @@
       display: flex;
       flex-direction: column;
       line-height: 1.1;
+      flex: 0 0 auto;
     }
 
     .brand strong {
@@ -142,6 +151,7 @@
       border-radius: 16px;
       box-shadow: var(--shadow);
       padding: 10px;
+      z-index: 300;
     }
 
     .dropdown-content a {
@@ -165,6 +175,115 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .mobile-menu {
+      display: none;
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 16px;
+    }
+
+    .mobile-menu details {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 10px 24px rgba(7, 24, 39, 0.08);
+      overflow: hidden;
+    }
+
+    .mobile-menu details[open] {
+      max-height: calc(100vh - 150px);
+      overflow: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    .mobile-menu summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      color: var(--navy);
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-menu summary span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mobile-menu .menu-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .mobile-menu-grid {
+      display: grid;
+      gap: 8px;
+      padding: 0 14px 80px;
+      max-height: calc(100vh - 215px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    .mobile-menu-grid a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .mobile-menu-grid a:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .mobile-menu-grid .mobile-close {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .mobile-menu-grid .mobile-close:hover {
+      background: var(--navy-soft);
+      color: var(--white);
+      border-color: var(--navy-soft);
+    }
+
+    .mobile-menu-grid .mobile-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 12px 4px 2px;
     }
 
     .btn {
@@ -536,27 +655,77 @@
         grid-template-columns: 1fr;
       }
 
-      .menu {
+      .menu,
+      .nav-actions {
         display: none;
       }
 
       .nav {
         align-items: flex-start;
+        padding-bottom: 12px;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+
+    @supports (height: 100dvh) {
+      .mobile-menu details[open] {
+        max-height: calc(100dvh - 150px);
+      }
+
+      .mobile-menu-grid {
+        max-height: calc(100dvh - 215px);
       }
     }
 
     @media (max-width: 640px) {
+      .top-bar {
+        padding: 14px 18px;
+      }
+
       .top-bar-inner {
         justify-content: center;
         text-align: center;
+        gap: 8px;
       }
 
-      .nav-actions {
-        display: none;
+      .top-bar-inner div {
+        width: 100%;
+      }
+
+      .nav {
+        padding: 18px 20px 12px;
+      }
+
+      .brand strong {
+        font-size: 30px;
+        line-height: 1.05;
+      }
+
+      .brand span {
+        font-size: 16px;
+        line-height: 1.25;
+        max-width: 330px;
       }
 
       .hero {
         padding: 58px 18px 48px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+        letter-spacing: -1.8px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
       }
 
       section {
@@ -582,14 +751,14 @@
       .mobile-sticky a {
         color: var(--white);
         text-align: center;
-        padding: 12px 6px;
+        padding: 14px 6px;
         font-weight: 900;
-        font-size: 14px;
+        font-size: 15px;
         border-right: 1px solid rgba(255, 255, 255, 0.12);
       }
 
       footer {
-        padding-bottom: 78px;
+        padding-bottom: 84px;
       }
     }
   </style>
@@ -601,7 +770,7 @@
     <div class="top-bar-inner">
       <div>Contact Carey Web Services for launch website prices and business extras</div>
       <div>
-        <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>
+        <a href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Contact%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20or%20business%20extra.%0D%0A%0D%0APage%3A%20Contact%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">careywebservicesireland@gmail.com</a>
       </div>
     </div>
   </div>
@@ -637,10 +806,39 @@
       </div>
 
       <div class="nav-actions">
-        <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com">Email</a>
-        <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+        <a class="btn btn-light" href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Contact%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20or%20business%20extra.%0D%0A%0D%0APage%3A%20Contact%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email</a>
+        <a class="btn btn-primary" href="#contact-options">Get a Quote</a>
       </div>
     </nav>
+
+    <div class="mobile-menu">
+      <details>
+        <summary>
+          <span><span class="menu-icon">☰</span> Menu</span>
+          <span class="menu-state">Open</span>
+        </summary>
+
+        <div class="mobile-menu-grid">
+          <a href="index.html">Home</a>
+          <a href="index.html#what-i-build">Services</a>
+          <a href="packages.html">Packages</a>
+          <a href="samples.html">Samples</a>
+          <a href="business-extras.html">Extras</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+
+          <div class="mobile-subtitle">Sample Websites</div>
+          <a href="tree-services-sample.html">Tree Services Website</a>
+          <a href="cleaning-services-sample.html">Cleaning Services Website</a>
+          <a href="power-washing-sample.html">Power Washing Website</a>
+          <a href="garden-services-sample.html">Garden Services Website</a>
+          <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
+          <a href="club-event-sample.html">Club / Event Website</a>
+          <a class="mobile-close" href="#" data-close-menu>Close Menu</a>
+        </div>
+      </details>
+    </div>
   </header>
 
   <main>
@@ -659,14 +857,14 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="tel:+353857800352">Call Noel</a>
-          <a class="btn btn-light" href="https://wa.me/353857800352">WhatsApp Noel</a>
+          <a class="btn btn-light" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20or%20business%20extra.%0A%0APage%3A%20Contact%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">WhatsApp Noel</a>
           <a class="btn btn-light" href="packages.html">View Packages</a>
           <a class="btn btn-light" href="business-extras.html">View Business Extras</a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="contact-options">
       <div class="container">
         <div class="section-head">
           <span>Contact Details</span>
@@ -695,7 +893,7 @@
                 <div class="arrow">→</div>
               </a>
 
-              <a class="big-contact" href="https://wa.me/353857800352">
+              <a class="big-contact" href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20or%20business%20extra.%0A%0APage%3A%20Contact%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">
                 <div>
                   <strong>WhatsApp Noel</strong>
                   <span>Send your business details, photos and extra requests</span>
@@ -703,7 +901,7 @@
                 <div class="arrow">→</div>
               </a>
 
-              <a class="big-contact" href="mailto:careywebservicesireland@gmail.com">
+              <a class="big-contact" href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Contact%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20or%20business%20extra.%0D%0A%0D%0APage%3A%20Contact%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">
                 <div>
                   <strong>Email Carey Web Services</strong>
                   <span>careywebservicesireland@gmail.com</span>
@@ -847,9 +1045,53 @@
 
   <div class="mobile-sticky">
     <a href="tel:+353857800352">Call</a>
-    <a href="https://wa.me/353857800352">WhatsApp</a>
-    <a href="mailto:careywebservicesireland@gmail.com">Email</a>
+    <a href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20or%20business%20extra.%0A%0APage%3A%20Contact%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0AWhat%20I%20need%3A">WhatsApp</a>
+    <a href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Contact%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20or%20business%20extra.%0D%0A%0D%0APage%3A%20Contact%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email</a>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileDetails = document.querySelector(".mobile-menu details");
+      if (!mobileDetails) return;
+
+      const menuState = mobileDetails.querySelector(".menu-state");
+
+      const setMenuState = function () {
+        if (menuState) {
+          menuState.textContent = mobileDetails.open ? "Close" : "Open";
+        }
+
+        document.body.classList.toggle("menu-open", mobileDetails.open);
+
+        if (mobileDetails.open) {
+          const menuGrid = mobileDetails.querySelector(".mobile-menu-grid");
+          if (menuGrid) {
+            menuGrid.scrollTop = 0;
+          }
+        }
+      };
+
+      mobileDetails.addEventListener("toggle", setMenuState);
+
+      mobileDetails.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          const href = link.getAttribute("href") || "";
+
+          if (link.hasAttribute("data-close-menu") || href.startsWith("#")) {
+            mobileDetails.removeAttribute("open");
+            setMenuState();
+          }
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && mobileDetails.open) {
+          mobileDetails.removeAttribute("open");
+          setMenuState();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

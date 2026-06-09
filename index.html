@@ -199,32 +199,12 @@
       overflow: hidden;
     }
 
-    body.menu-open {
+    .mobile-menu details[open] {
+      max-height: calc(100vh - 150px);
       overflow: hidden;
     }
 
-    body.menu-open::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(7, 24, 39, 0.38);
-      z-index: 999;
-    }
-
-    body.menu-open .mobile-menu {
-      position: fixed;
-      top: 10px;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      max-width: none;
-      padding: 0 14px 86px;
-    }
-
-    body.menu-open .mobile-menu details[open] {
-      max-height: calc(100vh - 20px);
-      border-radius: 20px;
-      box-shadow: 0 24px 70px rgba(7, 24, 39, 0.28);
+    body.menu-open {
       overflow: hidden;
     }
 
@@ -266,16 +246,11 @@
     .mobile-menu-grid {
       display: grid;
       gap: 8px;
-      padding: 0 14px 18px;
-      max-height: calc(100vh - 188px);
+      padding: 0 14px 80px;
+      max-height: calc(100vh - 215px);
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: contain;
-    }
-
-    body.menu-open .mobile-menu-grid {
-      max-height: calc(100vh - 96px);
-      padding-bottom: 28px;
     }
 
     .mobile-menu-grid a {
@@ -838,12 +813,12 @@
     }
 
     @supports (height: 100dvh) {
-      body.menu-open .mobile-menu details[open] {
-        max-height: calc(100dvh - 20px);
+      .mobile-menu details[open] {
+        max-height: calc(100dvh - 150px);
       }
 
-      body.menu-open .mobile-menu-grid {
-        max-height: calc(100dvh - 96px);
+      .mobile-menu-grid {
+        max-height: calc(100dvh - 215px);
       }
     }
 
@@ -1586,17 +1561,6 @@
 
       document.addEventListener("keydown", function (event) {
         if (event.key === "Escape" && mobileDetails.open) {
-          mobileDetails.removeAttribute("open");
-          setMenuState();
-        }
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!document.body.classList.contains("menu-open")) return;
-
-        const mobileMenu = document.querySelector(".mobile-menu");
-
-        if (mobileMenu && !mobileMenu.contains(event.target)) {
           mobileDetails.removeAttribute("open");
           setMenuState();
         }

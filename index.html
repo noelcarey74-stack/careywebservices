@@ -199,12 +199,32 @@
       overflow: hidden;
     }
 
-    .mobile-menu details[open] {
-      max-height: calc(100vh - 118px);
+    body.menu-open {
       overflow: hidden;
     }
 
-    body.menu-open {
+    body.menu-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 24, 39, 0.38);
+      z-index: 999;
+    }
+
+    body.menu-open .mobile-menu {
+      position: fixed;
+      top: 10px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      max-width: none;
+      padding: 0 14px 86px;
+    }
+
+    body.menu-open .mobile-menu details[open] {
+      max-height: calc(100vh - 20px);
+      border-radius: 20px;
+      box-shadow: 0 24px 70px rgba(7, 24, 39, 0.28);
       overflow: hidden;
     }
 
@@ -251,6 +271,11 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: contain;
+    }
+
+    body.menu-open .mobile-menu-grid {
+      max-height: calc(100vh - 96px);
+      padding-bottom: 28px;
     }
 
     .mobile-menu-grid a {
@@ -813,12 +838,12 @@
     }
 
     @supports (height: 100dvh) {
-      .mobile-menu details[open] {
-        max-height: calc(100dvh - 118px);
+      body.menu-open .mobile-menu details[open] {
+        max-height: calc(100dvh - 20px);
       }
 
-      .mobile-menu-grid {
-        max-height: calc(100dvh - 188px);
+      body.menu-open .mobile-menu-grid {
+        max-height: calc(100dvh - 96px);
       }
     }
 
@@ -1530,11 +1555,20 @@
       if (!mobileDetails) return;
 
       const menuState = mobileDetails.querySelector(".menu-state");
+
       const setMenuState = function () {
         if (menuState) {
           menuState.textContent = mobileDetails.open ? "Close" : "Open";
         }
+
         document.body.classList.toggle("menu-open", mobileDetails.open);
+
+        if (mobileDetails.open) {
+          const menuGrid = mobileDetails.querySelector(".mobile-menu-grid");
+          if (menuGrid) {
+            menuGrid.scrollTop = 0;
+          }
+        }
       };
 
       mobileDetails.addEventListener("toggle", setMenuState);
@@ -1548,6 +1582,24 @@
             setMenuState();
           }
         });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && mobileDetails.open) {
+          mobileDetails.removeAttribute("open");
+          setMenuState();
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!document.body.classList.contains("menu-open")) return;
+
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        if (mobileMenu && !mobileMenu.contains(event.target)) {
+          mobileDetails.removeAttribute("open");
+          setMenuState();
+        }
       });
     });
   </script>

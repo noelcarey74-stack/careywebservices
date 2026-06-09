@@ -194,6 +194,15 @@
       overflow: hidden;
     }
 
+    .mobile-menu details[open] {
+      max-height: calc(100vh - 150px);
+      overflow: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
     .mobile-menu summary {
       list-style: none;
       cursor: pointer;
@@ -232,7 +241,11 @@
     .mobile-menu-grid {
       display: grid;
       gap: 8px;
-      padding: 0 14px 14px;
+      padding: 0 14px 80px;
+      max-height: calc(100vh - 215px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
 
     .mobile-menu-grid a {
@@ -248,6 +261,20 @@
     .mobile-menu-grid a:hover {
       border-color: var(--blue);
       color: var(--blue);
+    }
+
+    .mobile-menu-grid .mobile-close {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .mobile-menu-grid .mobile-close:hover {
+      background: var(--navy-soft);
+      color: var(--white);
+      border-color: var(--navy-soft);
     }
 
     .mobile-menu-grid .mobile-subtitle {
@@ -651,6 +678,16 @@
       }
     }
 
+    @supports (height: 100dvh) {
+      .mobile-menu details[open] {
+        max-height: calc(100dvh - 150px);
+      }
+
+      .mobile-menu-grid {
+        max-height: calc(100dvh - 215px);
+      }
+    }
+
     @media (max-width: 640px) {
       .top-bar {
         padding: 14px 18px;
@@ -798,7 +835,7 @@
       <details>
         <summary>
           <span><span class="menu-icon">☰</span> Menu</span>
-          <span>Open</span>
+          <span class="menu-state">Open</span>
         </summary>
 
         <div class="mobile-menu-grid">
@@ -818,6 +855,7 @@
           <a href="garden-services-sample.html">Garden Services Website</a>
           <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
           <a href="club-event-sample.html">Club / Event Website</a>
+          <a class="mobile-close" href="#" data-close-menu>Close Menu</a>
         </div>
       </details>
     </div>
@@ -1224,6 +1262,50 @@
     <a href="https://wa.me/353857800352?text=New%20Carey%20Web%20Services%20enquiry%0A%0AHi%20Noel%2C%20I%27m%20interested%20in%20a%20website%20package.%0A%0APage%3A%20Packages%20Page%0AService%3A%20Carey%20Web%20Services%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20phone%20number%3A%0APackage%20I%27m%20interested%20in%3A%0AWhat%20I%20need%3A">WhatsApp</a>
     <a href="mailto:careywebservicesireland@gmail.com?subject=New%20Carey%20Web%20Services%20enquiry%20from%20Packages%20Page&body=Hi%20Noel%2C%0D%0A%0D%0AI%27m%20interested%20in%20a%20website%20package.%0D%0A%0D%0APage%3A%20Packages%20Page%0D%0AService%3A%20Carey%20Web%20Services%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20phone%20number%3A%0D%0APackage%20I%27m%20interested%20in%3A%0D%0AWhat%20I%20need%3A%0D%0A%0D%0AThanks.">Email</a>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileDetails = document.querySelector(".mobile-menu details");
+      if (!mobileDetails) return;
+
+      const menuState = mobileDetails.querySelector(".menu-state");
+
+      const setMenuState = function () {
+        if (menuState) {
+          menuState.textContent = mobileDetails.open ? "Close" : "Open";
+        }
+
+        document.body.classList.toggle("menu-open", mobileDetails.open);
+
+        if (mobileDetails.open) {
+          const menuGrid = mobileDetails.querySelector(".mobile-menu-grid");
+          if (menuGrid) {
+            menuGrid.scrollTop = 0;
+          }
+        }
+      };
+
+      mobileDetails.addEventListener("toggle", setMenuState);
+
+      mobileDetails.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          const href = link.getAttribute("href") || "";
+
+          if (link.hasAttribute("data-close-menu") || href.startsWith("#")) {
+            mobileDetails.removeAttribute("open");
+            setMenuState();
+          }
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && mobileDetails.open) {
+          mobileDetails.removeAttribute("open");
+          setMenuState();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

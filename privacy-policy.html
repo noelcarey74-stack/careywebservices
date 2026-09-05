@@ -1,821 +1,98 @@
 <!DOCTYPE html>
-<html lang="en-IE">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Privacy Policy | Carey Web Services Ireland</title>
-
-  <meta name="description" content="Privacy Policy for Carey Web Services. Learn how Carey Web Services collects, uses and stores information when customers enquire about simple one-page websites, QR code cards, review cards and business extras for Irish service businesses." />
-
-  <meta name="keywords" content="Carey Web Services privacy policy, website privacy policy Ireland, GDPR website policy Ireland, service website privacy policy, QR code cards privacy Ireland, business extras privacy policy" />
-
-  <meta name="author" content="Carey Web Services" />
-  <meta name="theme-color" content="#071827" />
-
+  <title>Privacy Policy | Carey Web Services</title>
+  <meta name="description" content="Privacy information for Carey Web Services." />
   <link rel="canonical" href="https://careywebservices.ie/privacy-policy.html" />
-
-  <meta property="og:title" content="Privacy Policy | Carey Web Services Ireland" />
-  <meta property="og:description" content="Privacy Policy for Carey Web Services, covering simple websites, QR code cards, review cards and business extras for Irish service businesses." />
+  <meta property="og:title" content="Privacy Policy | Carey Web Services" />
+  <meta property="og:description" content="Privacy information for Carey Web Services." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://careywebservices.ie/privacy-policy.html" />
-
-  <style>
-    :root {
-      --navy: #071827;
-      --navy-soft: #102a43;
-      --blue: #1e88e5;
-      --green: #22c55e;
-      --white: #ffffff;
-      --off-white: #f7fafc;
-      --text: #1f2937;
-      --muted: #64748b;
-      --border: #dbe3ea;
-      --shadow: 0 20px 50px rgba(7, 24, 39, 0.14);
-      --radius: 22px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--off-white);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .top-bar {
-      background: var(--navy);
-      color: var(--white);
-      padding: 10px 20px;
-      font-size: 14px;
-    }
-
-    .top-bar-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .top-bar a {
-      color: var(--white);
-      font-weight: 700;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      flex: 0 0 auto;
-    }
-
-    .brand strong {
-      color: var(--navy);
-      font-size: 24px;
-      display: block;
-      letter-spacing: -0.5px;
-    }
-
-    .brand span {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-      margin-top: 4px;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .menu a {
-      padding: 8px 4px;
-    }
-
-    .menu a:hover {
-      color: var(--blue);
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 36px;
-      left: 0;
-      min-width: 260px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 10px;
-      z-index: 300;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 12px;
-      border-radius: 10px;
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .dropdown-content a:hover {
-      background: var(--off-white);
-      color: var(--blue);
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .mobile-menu {
-      display: none;
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 20px 16px;
-    }
-
-    .mobile-menu details {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: var(--white);
-      box-shadow: 0 10px 24px rgba(7, 24, 39, 0.08);
-      overflow: hidden;
-    }
-
-    .mobile-menu details[open] {
-      max-height: calc(100vh - 150px);
-      overflow: hidden;
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    .mobile-menu summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      color: var(--navy);
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .mobile-menu summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .mobile-menu summary span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .mobile-menu .menu-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: var(--white);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      flex: 0 0 auto;
-    }
-
-    .mobile-menu-grid {
-      display: grid;
-      gap: 8px;
-      padding: 0 14px 80px;
-      max-height: calc(100vh - 215px);
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: contain;
-    }
-
-    .mobile-menu-grid a {
-      display: block;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: var(--off-white);
-      border: 1px solid var(--border);
-      color: var(--navy);
-      font-weight: 800;
-    }
-
-    .mobile-menu-grid a:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-    }
-
-    .mobile-menu-grid .mobile-close {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    .mobile-menu-grid .mobile-close:hover {
-      background: var(--navy-soft);
-      color: var(--white);
-      border-color: var(--navy-soft);
-    }
-
-    .mobile-menu-grid .mobile-subtitle {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 12px 4px 2px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 2px solid transparent;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: var(--navy);
-      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 34px rgba(34, 197, 94, 0.35);
-    }
-
-    .btn-dark {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .btn-dark:hover {
-      background: var(--navy-soft);
-      transform: translateY(-2px);
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.24), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(30, 136, 229, 0.22), transparent 36%),
-        linear-gradient(135deg, #071827 0%, #102a43 100%);
-      color: var(--white);
-      padding: 82px 20px 68px;
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .badge {
-      display: inline-flex;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.02;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-      max-width: 900px;
-    }
-
-    .hero p {
-      color: #dbeafe;
-      font-size: 19px;
-      max-width: 850px;
-    }
-
-    section {
-      padding: 72px 20px;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .policy-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 14px 34px rgba(7, 24, 39, 0.08);
-    }
-
-    .policy-card h2 {
-      color: var(--navy);
-      font-size: 30px;
-      line-height: 1.15;
-      margin-top: 30px;
-      margin-bottom: 12px;
-    }
-
-    .policy-card h2:first-child {
-      margin-top: 0;
-    }
-
-    .policy-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-      font-size: 17px;
-    }
-
-    .policy-card ul {
-      margin: 12px 0 20px 22px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .policy-card li {
-      margin-bottom: 8px;
-    }
-
-    .notice {
-      background: #eef6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 22px;
-      padding: 22px;
-      margin: 24px 0;
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    footer {
-      background: #04111d;
-      color: #cbd5e1;
-      padding: 28px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #ffffff;
-      font-weight: 700;
-      margin: 0 8px;
-    }
-
-    .footer-links {
-      margin-top: 12px;
-    }
-
-    .mobile-sticky {
-      display: none;
-    }
-
-    @media (max-width: 980px) {
-      .menu,
-      .nav-actions {
-        display: none;
-      }
-
-      .nav {
-        align-items: flex-start;
-        padding-bottom: 12px;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-    }
-
-    @supports (height: 100dvh) {
-      .mobile-menu details[open] {
-        max-height: calc(100dvh - 150px);
-      }
-
-      .mobile-menu-grid {
-        max-height: calc(100dvh - 215px);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .top-bar {
-        padding: 14px 18px;
-      }
-
-      .top-bar-inner {
-        justify-content: center;
-        text-align: center;
-        gap: 8px;
-      }
-
-      .top-bar-inner div {
-        width: 100%;
-      }
-
-      .nav {
-        padding: 18px 20px 12px;
-      }
-
-      .brand strong {
-        font-size: 30px;
-        line-height: 1.05;
-      }
-
-      .brand span {
-        font-size: 16px;
-        line-height: 1.25;
-        max-width: 330px;
-      }
-
-      .hero {
-        padding: 58px 18px 48px;
-      }
-
-      .hero h1 {
-        font-size: clamp(42px, 12vw, 58px);
-        letter-spacing: -1.8px;
-      }
-
-      .hero p {
-        font-size: 20px;
-        line-height: 1.55;
-      }
-
-      section {
-        padding: 54px 18px;
-      }
-
-      .policy-card {
-        padding: 24px;
-      }
-
-      .mobile-sticky {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 200;
-        background: var(--navy);
-        border-top: 1px solid rgba(255, 255, 255, 0.16);
-      }
-
-      .mobile-sticky a {
-        color: var(--white);
-        text-align: center;
-        padding: 14px 6px;
-        font-weight: 900;
-        font-size: 15px;
-        border-right: 1px solid rgba(255, 255, 255, 0.12);
-      }
-
-      footer {
-        padding-bottom: 84px;
-      }
-    }
-  </style>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-  <div class="top-bar">
-    <div class="top-bar-inner">
-      <div>Privacy Policy — Carey Web Services</div>
-      <div>
-        <a href="mailto:careywebservicesireland@gmail.com?subject=Privacy%20Policy%20Question%20-%20Carey%20Web%20Services&body=Hi%20Noel%2C%0D%0A%0D%0AI%20have%20a%20question%20about%20the%20Privacy%20Policy.%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20question%3A%0D%0A%0D%0AThanks.">careywebservicesireland@gmail.com</a>
-      </div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="notice-bar">
+    <div class="container">
+      <span>Simple websites for Irish service businesses, schools, clubs and local projects.</span>
+      <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>
     </div>
   </div>
-
-  <header>
-    <nav class="nav">
-      <a href="index.html" class="brand">
-        <strong>Carey Web Services</strong>
-        <span>Simple websites. Clear pricing. One-to-one support.</span>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Carey Web Services home">
+        <span class="brand-mark">C✓</span>
+        <span class="brand-text"><strong>Carey Web Services</strong><span>Simple. Clear. One-to-one support.</span></span>
       </a>
-
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="index.html#what-i-build">Services</a>
-        <a href="packages.html">Packages</a>
-
-        <div class="dropdown">
-          <a href="samples.html">Samples ▼</a>
-          <div class="dropdown-content">
-            <a href="tree-services-sample.html">Tree Services Website</a>
-            <a href="cleaning-services-sample.html">Cleaning Services Website</a>
-            <a href="power-washing-sample.html">Power Washing Website</a>
-            <a href="garden-services-sample.html">Garden Services Website</a>
-            <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
-            <a href="club-event-sample.html">Club / Event Website</a>
-          </div>
-        </div>
-
-        <a href="business-extras.html">Extras</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="nav-actions">
-        <a class="btn btn-primary" href="contact.html">Get a Quote</a>
-      </div>
-    </nav>
-
-    <div class="mobile-menu">
-      <details>
-        <summary>
-          <span><span class="menu-icon">☰</span> Menu</span>
-          <span class="menu-state">Open</span>
-        </summary>
-
-        <div class="mobile-menu-grid">
-          <a href="index.html">Home</a>
-          <a href="index.html#what-i-build">Services</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a class="active" href="index.html">Home</a>
           <a href="packages.html">Packages</a>
-          <a href="samples.html">Samples</a>
-          <a href="business-extras.html">Extras</a>
-          <a href="how-it-works.html">How It Works</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="contact.html">Contact</a>
-
-          <div class="mobile-subtitle">Sample Websites</div>
-          <a href="tree-services-sample.html">Tree Services Website</a>
-          <a href="cleaning-services-sample.html">Cleaning Services Website</a>
-          <a href="power-washing-sample.html">Power Washing Website</a>
-          <a href="garden-services-sample.html">Garden Services Website</a>
-          <a href="motorcycle-services-sample.html">Motorcycle Services Website</a>
-          <a href="club-event-sample.html">Club / Event Website</a>
-          <a class="mobile-close" href="#" data-close-menu>Close Menu</a>
-        </div>
-      </details>
+          <a href="samples.html">Samples</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="business-extras.html">Business extras</a>
+          <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="badge">Privacy Policy</div>
-        <h1>Privacy Policy</h1>
-        <p>
-          This page explains how Carey Web Services collects, uses and protects information
-          when customers contact us about simple websites, QR code cards, review cards and
-          business extras for service businesses.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="policy-card">
-
-          <h2>1. Who we are</h2>
-          <p>
-            Carey Web Services builds simple one-page websites, service websites and business extras
-            for Irish service businesses, tradesmen, contractors, clubs, events and local services.
-          </p>
-          <p>
-            Website: careywebservices.ie<br>
-            Email: careywebservicesireland@gmail.com
-          </p>
-
-          <h2>2. Information we may collect</h2>
-          <p>
-            When you contact Carey Web Services by phone, WhatsApp or email, we may collect information such as:
-          </p>
-          <ul>
-            <li>Your name</li>
-            <li>Your business name</li>
-            <li>Your phone number</li>
-            <li>Your WhatsApp number</li>
-            <li>Your email address</li>
-            <li>Your business services</li>
-            <li>Your business location or service area</li>
-            <li>Your social media links, such as Facebook, Instagram or X</li>
-            <li>Your Google Business Profile link or Google review link, if you send it</li>
-            <li>Photos, logos or text you send for your website, QR cards, review cards or flyers</li>
-            <li>Information needed to prepare a quote or complete website/business extra work</li>
-          </ul>
-
-          <h2>3. How we use your information</h2>
-          <p>
-            We use your information to:
-          </p>
-          <ul>
-            <li>Reply to your enquiry</li>
-            <li>Prepare a website or business extras quote</li>
-            <li>Build or update your website</li>
-            <li>Create QR code cards, review cards, social media buttons or printable PDF designs where requested</li>
-            <li>Set up contact buttons, service details and website content</li>
-            <li>Help with domain setup or Google Business Profile details, where requested</li>
-            <li>Keep basic records of work completed and payments received</li>
-          </ul>
-
-          <h2>4. Legal basis for using your information</h2>
-          <p>
-            We use your information because you have contacted us about a service, asked for a quote,
-            or requested website work or business extras. This is necessary so we can respond to you
-            and provide the service.
-          </p>
-
-          <h2>5. Sharing your information</h2>
-          <p>
-            Carey Web Services does not sell your personal information.
-          </p>
-          <p>
-            We may need to use trusted third-party services when setting up or managing your website
-            or business extras, such as:
-          </p>
-          <ul>
-            <li>Domain providers</li>
-            <li>Website hosting platforms</li>
-            <li>Google Business Profile tools</li>
-            <li>Email or communication services</li>
-            <li>Design or PDF tools used to create QR cards, review cards or flyers</li>
-            <li>Payment services such as Revolut, where used</li>
-          </ul>
-
-          <h2>6. Customer ownership of accounts</h2>
-          <p>
-            Customers should ideally own their own domain name, Google Business Profile and social media accounts.
-            Carey Web Services may be added as a manager or helper where needed, but passwords should not be shared.
-          </p>
-
-          <h2>7. How long we keep information</h2>
-          <p>
-            We keep customer information only for as long as needed to reply to enquiries, complete website work,
-            create business extras, provide support, keep business records, and meet legal or tax obligations.
-          </p>
-
-          <h2>8. Your rights</h2>
-          <p>
-            You can contact Carey Web Services to ask about the information we hold about you.
-            You may ask for information to be corrected or deleted where appropriate.
-          </p>
-
-          <h2>9. Website tracking and cookies</h2>
-          <p>
-            This website may use basic technical features needed for the website to work. If analytics,
-            advertising pixels or extra tracking tools are added in the future, the cookie policy may be updated.
-          </p>
-
-          <div class="notice">
-            Carey Web Services currently focuses on simple service websites and business extras.
-            This website is not an online shop and does not process online orders through this site.
-          </div>
-
-          <h2>10. Contact about privacy</h2>
-          <p>
-            For any privacy questions, contact Carey Web Services by email:
-          </p>
-          <p>
-            careywebservicesireland@gmail.com
-          </p>
-
-          <h2>11. Updates to this policy</h2>
-          <p>
-            This Privacy Policy may be updated from time to time as the business, website or services change.
-          </p>
-
-          <p>
-            Last updated: June 2026
-          </p>
-
-        </div>
-      </div>
-    </section>
-
+    <section class="hero compact"><div class="container"><p class="eyebrow">Carey Web Services</p><h1>Privacy Policy</h1></div></section>
+    <section><div class="container">
+      <p class="lead">Carey Web Services only asks for the details needed to discuss, build and support your website.</p>
+      <div class="card"><h3>Information collected</h3><p>This may include your name, business name, phone number, email address, website details, photos and wording you send for your project.</p><h3>How it is used</h3><p>Your information is used to reply to enquiries, prepare your website, provide support and keep project records.</p><h3>Contact</h3><p>For privacy questions, email <a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a>.</p></div>
+    </div></section>
+    
   </main>
 
-  <footer>
-    <p>
-      © 2026 Carey Web Services. Simple websites for Irish service businesses.<br />
-      One-page websites, QR code cards, domain setup and Google Business Profile help.
-    </p>
-
-    <p class="footer-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="cookie-policy.html">Cookie Policy</a>
-      <a href="terms.html">Terms</a>
-    </p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Carey Web Services</strong>
+        <p>Clean, practical websites for Irish businesses, clubs, schools and local services. Built with personal support from start to finish.</p>
+        <p>Cork, Ireland</p>
+      </div>
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="samples.html">Samples</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="business-extras.html">Business extras</a></li>
+          <li><a href="tree-services-sample.html">Tree service sample</a></li>
+          <li><a href="club-event-sample.html">Club/event sample</a></li>
+          <li><a href="contact.html">Start a website</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+353857800352">085 780 0352</a></li>
+          <li><a href="mailto:careywebservicesireland@gmail.com">careywebservicesireland@gmail.com</a></li>
+          <li><a href="https://wa.me/353857800352" target="_blank" rel="noopener noreferrer">WhatsApp Noel</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Carey Web Services. Designed and developed by Carey Web Services.</p>
+      </div>
+    </div>
   </footer>
-
-  <div class="mobile-sticky">
-    <a href="tel:+353857800352">Call</a>
-    <a href="https://wa.me/353857800352?text=Hi%20Noel%2C%20I%20have%20a%20question%20about%20Carey%20Web%20Services.%0A%0AMy%20name%3A%0AMy%20business%3A%0AMy%20question%3A">WhatsApp</a>
-    <a href="mailto:careywebservicesireland@gmail.com?subject=Carey%20Web%20Services%20Question&body=Hi%20Noel%2C%0D%0A%0D%0AI%20have%20a%20question%20about%20Carey%20Web%20Services.%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20business%3A%0D%0AMy%20question%3A%0D%0A%0D%0AThanks.">Email</a>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileDetails = document.querySelector(".mobile-menu details");
-      if (!mobileDetails) return;
-
-      const menuState = mobileDetails.querySelector(".menu-state");
-
-      const setMenuState = function () {
-        if (menuState) {
-          menuState.textContent = mobileDetails.open ? "Close" : "Open";
-        }
-
-        document.body.classList.toggle("menu-open", mobileDetails.open);
-
-        if (mobileDetails.open) {
-          const menuGrid = mobileDetails.querySelector(".mobile-menu-grid");
-          if (menuGrid) {
-            menuGrid.scrollTop = 0;
-          }
-        }
-      };
-
-      mobileDetails.addEventListener("toggle", setMenuState);
-
-      mobileDetails.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          const href = link.getAttribute("href") || "";
-
-          if (link.hasAttribute("data-close-menu") || href.startsWith("#")) {
-            mobileDetails.removeAttribute("open");
-            setMenuState();
-          }
-        });
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && mobileDetails.open) {
-          mobileDetails.removeAttribute("open");
-          setMenuState();
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

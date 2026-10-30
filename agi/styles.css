@@ -76,3 +76,19 @@ footer{background:#061f47;color:#c7d8ef;padding:44px 0 28px}.footer-grid{display
  .grid-2,.grid-3,.grid-4,.app-gallery,.pricing{grid-template-columns:1fr}.gallery-item:nth-child(2),.gallery-item:nth-child(4){margin-top:0}
  .trust-strip{grid-template-columns:1fr 1fr}section{padding:52px 0}.navbar{min-height:68px}.brand img{width:42px;height:42px}.brand span{font-size:.94rem}
 }
+
+/* Mobile overflow safeguards */
+body{overflow-x:hidden}
+.hero-grid>*{min-width:0}
+@media(max-width:650px){
+  .hero h1{font-size:2.35rem;line-height:1.05;overflow-wrap:break-word}
+  .hero .lead{font-size:1rem}
+  .actions{display:grid;grid-template-columns:1fr;width:100%}
+  .actions .btn{width:100%;text-align:center}
+  .hero-badges{gap:7px}
+  .hero-badges span{font-size:.78rem;padding:7px 9px}
+  .navlinks .nav-cta{font-size:.82rem;padding:8px 10px}
+  .brand{min-width:0}
+  .brand span{font-size:.9rem}
+  .hero-showcase{margin-top:12px}
+}
